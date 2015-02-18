@@ -3,7 +3,7 @@
 # and calculate factorial of a number
 
 
-def sum
+def sum(a, b)
 =begin
 	(int, int) -> int
 
@@ -14,9 +14,10 @@ def sum
 	=> 3
 =end
 	# write your code here
+	return a + b
 end
 
-def difference
+def difference(a, b)
 =begin
 	(int, int) -> int
 
@@ -27,9 +28,10 @@ def difference
 	=> 3
 =end
 	# write your code here
+	return a - b
 end
 
-def product
+def product(a, b)
 =begin
 	(int, int) -> int
 
@@ -40,9 +42,10 @@ def product
 	=> 10
 =end
 	# write your code here
+	return a * b
 end
 
-def quotient
+def quotient(a, b)
 =begin
 	(int, int) -> int
 
@@ -53,9 +56,13 @@ def quotient
 	=> 3
 =end
 	# write your code here
+	if b == 0
+		return "Division is impossible since divisor is equal to zero"
+	end
+	return a / b
 end
 
-def factorial
+def factorial(a)
 =begin
 	(int) -> int
 
@@ -66,4 +73,11 @@ def factorial
 	=> 120
 =end
 	# write your code here
+	res = 1
+	i = 1
+	a.times {
+		res *= i
+		i += 1
+	}
+	return res
 end
